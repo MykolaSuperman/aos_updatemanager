@@ -587,10 +587,10 @@ func (handler *Handler) doReboot(componentStatuses []*umclient.ComponentStatusIn
 			operation: func() (err error) {
 				log.WithField("id", module.GetID()).Debug("Reboot component")
 
-				if err := module.Reboot(); err != nil {
-					componentError(componentStatus, err)
-					return aoserrors.Wrap(err)
-				}
+				// if err := module.Reboot(); err != nil {
+				// 	componentError(componentStatus, err)
+				// 	return aoserrors.Wrap(err)
+				// }
 
 				return nil
 			},
